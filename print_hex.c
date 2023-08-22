@@ -18,8 +18,9 @@ int printf_hex(va_list val)
 		counter++;
 	}
 	counter++;
-	array = malloc(counter; i++)
-
+	array = malloc(counter * sizeof(int));
+	
+	for (i = 0; i < counter; i++)
 	{
 	array[i] = temp % 16;
 	temp /= 16;
@@ -27,7 +28,7 @@ int printf_hex(va_list val)
 	for (i = counter - 1; i >= 0; i--)
 	{
 	if (array[i] > 9)
-		array[i] - array[i] + 39;
+		array[i] = array[i] + 39;
 	_putchar(array[i] + '0');
 	}
 	free(array);
