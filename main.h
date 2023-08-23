@@ -7,7 +7,12 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-
+/* FLAGS */
+#define F_MINUS 1
+#define F_PLUS 2
+#define F_ZERO 4
+#define F_HASH 8
+#define F_SPACE 16
 
 
 /**
@@ -24,6 +29,7 @@ typedef struct format
 } convert_match;
 
 int _strlen(char *s);
+int get_flags(const char *format, int *i);
 int *_strcpy(char *dest, char *src);
 int _strlenc(const char *s);
 int rev_string(char *s);
